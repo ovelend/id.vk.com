@@ -13,6 +13,11 @@ reference.conf. Библиотека typesafe.config по дефолту смо�
 2. Перед запуском API тестов необходимо установить актуальное значение Cookie для
 id.vk.com в application.conf. Найти можно в файле ?act=web_token в Request c заголовком "cookie".
 
+3. Если при сборке проекта возникает ошибка **BUG! exception in phase 'semantic analysis' in source unit '_BuildScript_' Unsupported class file major version 61**
+, необходимо в Setting -> Build -> Build Tools -> Gradle -> Gradle JVM установить более старую версию JDK (например 8 или 11).
+
+4. Проверить, что установлен плагин Lombok
+
 ![img.png](img.png)
 
 # Чек лист для раздела Personal Data
