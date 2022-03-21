@@ -1,0 +1,35 @@
+### Compiled source ###
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+*.jar
+*.war
+*.ear
+
+### Gradle ###
+/gradle
+/build
+.gradletasknamecache
+/.gradle
+bin/
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### Allure ###
+.allure
+allure-results
+
+# Local enviroment variables that may contain secrets
+.gradle/*
+/src/test/resources/reference.conf
+
+# generated files
+bin/**
+gen/**

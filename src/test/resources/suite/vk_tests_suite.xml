@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="vk_id_suite" verbose="10">
+    <test name="All_tests" parallel="none">
+        <packages>
+            <package name="src.test.java.tests.vk.*"/>
+        </packages>
+    </test>
+</suite>
