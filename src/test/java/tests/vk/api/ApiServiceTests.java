@@ -10,13 +10,13 @@ import core.vk.base.BaseApiTest;
 import core.vk.utils.HttpResponseCodes;
 
 import static core.vk.accounts.TestAccounts.POSITIVE_API_ACCOUNT_2;
-import static core.vk.api.ResponseBodeHelper.ResponseBodyHelper.getValueFromBody;
 import static core.vk.accounts.TestAccounts.POSITIVE_API_ACCOUNT_1;
+import static core.vk.utils.ResponseBodyHelpers.getValueFromBody;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class ApiServiceTests extends BaseApiTest {
 
-    private VkApiService vkApiService = new VkApiService();
+    private final VkApiService vkApiService = new VkApiService();
     private String authToken;
 
     /**

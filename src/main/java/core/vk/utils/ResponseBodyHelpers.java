@@ -1,8 +1,8 @@
-package core.vk.api.ResponseBodeHelper;
+package core.vk.utils;
 
 import io.restassured.response.Response;
 
-public class ResponseBodyHelper {
+public class ResponseBodyHelpers {
 
     public static String getValueFromBody(Response resp, String path) {
         if (resp != null) {
