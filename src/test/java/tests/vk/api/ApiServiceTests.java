@@ -1,16 +1,16 @@
 package tests.vk.api;
 
+import core.vk.api.services.VkApiService;
 import io.qameta.allure.Description;
 import io.restassured.response.Response;
 import org.assertj.core.api.SoftAssertions;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import core.vk.api.VkApiService;
 import core.vk.base.BaseApiTest;
 import core.vk.utils.HttpResponseCodes;
 
 import static core.vk.accounts.TestAccounts.POSITIVE_API_ACCOUNT_2;
-import static core.vk.api.VkApiService.getValueFromBody;
+import static core.vk.api.ResponseBodeHelper.ResponseBodyHelper.getValueFromBody;
 import static core.vk.accounts.TestAccounts.POSITIVE_API_ACCOUNT_1;
 import static org.assertj.core.api.Assertions.assertThat;
 
