@@ -1,4 +1,4 @@
-package core.vk.api.helpers;
+package core.vk.api.specs;
 
 import core.vk.data.PersonalAccountData;
 import io.restassured.builder.RequestSpecBuilder;
@@ -12,7 +12,7 @@ import static core.vk.utils.ConfigProvider.APP_CONFIG;
  * There are also some data what can be defined in .conf files and use in our specifications.
  */
 
-public class VkApiServiceHelper {
+public class VkApiServiceSpecs {
 
     private static final String loginVkComURL = APP_CONFIG.getString("api_urls.login.vk.com");
     private static final String apiVkCom = APP_CONFIG.getString("api_urls.api.vk.com");

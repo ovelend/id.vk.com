@@ -8,8 +8,7 @@ import core.vk.base.BaseUiTest;
 import core.vk.pages.PersonalDataPage;
 import core.vk.pages.VKLoginPage;
 
-import static core.vk.accounts.TestAccounts.DEFAULT_POSITIVE_UI_ACCOUNT;
-import static core.vk.accounts.TestAccounts.POSITIVE_UI_ACCOUNT;
+import static core.vk.accounts.TestAccounts.*;
 
 
 public class PersonalDataUITests extends BaseUiTest {
@@ -28,14 +27,14 @@ public class PersonalDataUITests extends BaseUiTest {
         PersonalDataPage
                 .openPage()
                 .checkPersonalDataPageDisplayed()
-                .rememberOldNameAndLastName(POSITIVE_UI_ACCOUNT)
-                .typeFullName(POSITIVE_UI_ACCOUNT)
+                .rememberOldNameAndLastName(UI_ACCOUNT_1)
+                .typeFullName(UI_ACCOUNT_1)
                 .changeGender()
-                .changeBirthdayFully(POSITIVE_UI_ACCOUNT)
+                .changeBirthdayFully(UI_ACCOUNT_1)
                 .saveUpdates()
-                .checkUpdateRequestMessageShown(POSITIVE_UI_ACCOUNT)
-                .checkNameAndLastNameStillOld(POSITIVE_UI_ACCOUNT)
-                .returnDefaultTestData(DEFAULT_POSITIVE_UI_ACCOUNT);
+                .checkUpdateRequestMessageShown(UI_ACCOUNT_1)
+                .checkNameAndLastNameStillOld(UI_ACCOUNT_1)
+                .returnDefaultTestData(DEFAULT_UI_ACCOUNT);
     }
 
     @Test
@@ -44,13 +43,13 @@ public class PersonalDataUITests extends BaseUiTest {
         PersonalDataPage
                 .openPage()
                 .checkPersonalDataPageDisplayed()
-                .rememberOldNameAndLastName(POSITIVE_UI_ACCOUNT)
-                .typeFullName(POSITIVE_UI_ACCOUNT)
-                .changeBirthdayFully(POSITIVE_UI_ACCOUNT)
+                .rememberOldNameAndLastName(UI_ACCOUNT_1)
+                .typeFullName(UI_ACCOUNT_1)
+                .changeBirthdayFully(UI_ACCOUNT_1)
                 .saveUpdates()
                 .cancelUpdateRequest()
-                .checkNameAndLastNameStillOld(POSITIVE_UI_ACCOUNT)
-                .checkNewBirthdaySavedUpdated(POSITIVE_UI_ACCOUNT)
-                .returnDefaultTestData(DEFAULT_POSITIVE_UI_ACCOUNT);
+                .checkNameAndLastNameStillOld(UI_ACCOUNT_1)
+                .checkNewBirthdaySavedUpdated(UI_ACCOUNT_1)
+                .returnDefaultTestData(DEFAULT_UI_ACCOUNT);
     }
 }

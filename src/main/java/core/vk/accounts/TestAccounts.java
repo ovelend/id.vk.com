@@ -9,7 +9,7 @@ import static core.vk.utils.NameAndDateGenerator.*;
 
 public class TestAccounts {
 
-    public static final PersonalAccountData DEFAULT_POSITIVE_UI_ACCOUNT = PersonalAccountData
+    public static final PersonalAccountData DEFAULT_UI_ACCOUNT = PersonalAccountData
             .builder()
             .firstName("Oleg")
             .lastName("Karlov")
@@ -19,7 +19,7 @@ public class TestAccounts {
             .yearOfBirth("1993")
             .build();
 
-    public static final PersonalAccountData POSITIVE_UI_ACCOUNT = PersonalAccountData
+    public static final PersonalAccountData UI_ACCOUNT_1 = PersonalAccountData
             .builder()
             .firstName(getRandomMaleName())
             .lastName(getRandomMaleLastName())
@@ -29,25 +29,25 @@ public class TestAccounts {
             .yearOfBirth(getRandomYear())
             .build();
 
-    public static final PersonalAccountData POSITIVE_API_ACCOUNT_1 = PersonalAccountData
+    public static final PersonalAccountData API_ACCOUNT_1 = PersonalAccountData
             .builder()
             .firstName(generateAnyString())
             .lastName(generateAnyString())
             .sex("2")
             .lang("3")
             .v("5.127")
-            .bdate("2.8.1985")
+            .bdate(generateBDateForApiTests())
             .vkui("1")
             .build();
 
-    public static final PersonalAccountData POSITIVE_API_ACCOUNT_2 = PersonalAccountData
+    public static final PersonalAccountData API_ACCOUNT_2 = PersonalAccountData
             .builder()
             .firstName(generateAnyString())
             .lastName(generateAnyString())
             .sex("2")
             .lang("3")
             .v("5.127")
-            .bdate("2.3.1999")
+            .bdate(generateBDateForApiTests())
             .vkui("1")
             .build();
 }

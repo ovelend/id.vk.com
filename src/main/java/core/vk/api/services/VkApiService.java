@@ -4,7 +4,7 @@ import io.qameta.allure.Step;
 import io.restassured.response.Response;
 import core.vk.data.PersonalAccountData;
 
-import static core.vk.api.helpers.VkApiServiceHelper.*;
+import static core.vk.api.specs.VkApiServiceSpecs.*;
 import static core.vk.utils.ResponseBodyHelpers.getValueFromBody;
 import static io.restassured.RestAssured.given;
 

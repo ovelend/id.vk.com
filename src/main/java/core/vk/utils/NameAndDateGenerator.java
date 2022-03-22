@@ -18,7 +18,7 @@ public class NameAndDateGenerator {
     }
 
     public static String getRandomMonth() {
-        return MONTH[0 + (int) (Math.random() * 12)];
+        return MONTH[(int) (Math.random() * 12)];
     }
 
     public static String getRandomYear() {
@@ -52,5 +52,13 @@ public class NameAndDateGenerator {
     public static String generateAnyString() {
         String genStr = RandomStringUtils.randomAlphabetic(2, 10);
         return genStr.substring(0, 1).toUpperCase() + genStr.substring(1).toLowerCase();
+    }
+
+    public static String generateBDateForApiTests() {
+        String day = getRandomDay();
+        String month = String.valueOf(
+                ((int) (Math.random() * 11)) + 1);
+        String year = getRandomYear();
+        return String.format("%s.%s.%s", day, month, year);
     }
 }
