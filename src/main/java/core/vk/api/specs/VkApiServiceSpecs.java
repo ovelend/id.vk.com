@@ -83,4 +83,5 @@ public class VkApiServiceSpecs {
                 .addFormParam("vkui", data.getVkui())
                 .build();
     }
+
 }
