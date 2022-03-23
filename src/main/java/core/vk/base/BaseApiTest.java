@@ -23,11 +23,13 @@ public class BaseApiTest {
 
     @BeforeSuite
     public void initRestAssuredSettings() {
-        setLogFilterParams();
-        RestAssured.filters(
-                new RequestLoggingFilter(requestLogDetail),
-                new ResponseLoggingFilter(responseLogDetail)
-        );
+        if (REST_ASSURED_LOG_LEVEL != RestAssuredLogLevel.NONE) {
+            setLogFilterParams();
+            RestAssured.filters(
+                    new RequestLoggingFilter(requestLogDetail),
+                    new ResponseLoggingFilter(responseLogDetail)
+            );
+        }
     }
 
     private static void setLogFilterParams() {
