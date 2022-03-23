@@ -10,10 +10,11 @@
 *.ear
 
 ### Gradle ###
-/gradle
-/build
+.gradle
+/build/
+!gradle-wrapper.properties
+!gradle-wrapper.jar
 .gradletasknamecache
-/.gradle
 bin/
 
 ### IntelliJ IDEA ###
